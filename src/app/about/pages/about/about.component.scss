@@ -1,0 +1,69 @@
+.container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(15px, 1fr) [main-content-start] minmax(min-content, 930px) [main-content-end] minmax(15px, 1fr) [full-end];
+    grid-row-gap: 30px;
+
+    > .hero {
+        background-image: url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 515px;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(44, 51, 64, 0.8);
+        }
+    }
+
+    > .profile-box {
+        margin-top: 12.5rem;
+        display: block;
+        z-index: 1;
+        grid-column: main-content-start / main-content-end;
+    }
+
+    > .description {
+        grid-column: main-content-start / main-content-end;
+    }
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 5rem;
+    
+    > .button {
+        padding: 21px 55px;
+        letter-spacing: 0.075rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.5rem;
+        transition: box-shadow 0.2s ease-in-out;
+        background-color: $color-background-dark-light;
+        color: $color-text-dark-2;
+        border: 1px solid $color-border-dark-light2;
+
+        &:hover {
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+    }
+
+    > .text {
+        margin-top: 2.5rem;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.8; 
+    }
+}
+
+
+
+
+

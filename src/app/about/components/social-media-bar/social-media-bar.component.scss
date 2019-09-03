@@ -1,0 +1,50 @@
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(6, 45px);
+    grid-column-gap: 30px;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+
+    @include mq(small) {
+        grid-template-columns: repeat(6, 35px);
+        grid-column-gap: 10px;
+    }
+}
+
+.social-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(small) {
+        width: 35px;
+        height: 35px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease-in;            
+    }
+
+    & > .icon {
+        display: block;
+        font-size: 2rem;
+
+        @include mq(small) {
+            font-size: 1.5rem;
+        }
+
+        &.-white{
+            color: white;
+        }
+
+    }
+}

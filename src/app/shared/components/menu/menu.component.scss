@@ -1,0 +1,103 @@
+.header{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 60px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-background-light;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+
+    @include mq(medium) {
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .navigation {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+    > .navigation-button {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+}
+
+.logo {
+    color: $color-secondary;
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: $font-family-brand;
+    
+    > .highlight {
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 30px;
+        margin-right: 3px;
+    }
+}
+
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(9, max-content);
+    align-items: center;
+    list-style: none;
+    grid-column-gap: 30px;
+
+    @include mq(medium) {
+        display: none;
+    }
+}
+
+.navigation-item {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 0;
+        border-bottom: 3px solid $color-primary;
+        transition: width 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &.-active {
+        &::after {
+            width: 100%;
+            transition: width 0.2s ease-in;
+        }
+    }
+
+    > .link {
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $color-text-dark-2;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.navigation-button {
+    display: none;
+    cursor: pointer;
+    max-width: 80px;
+    color: $color-primary;
+    border: 1px solid #d1d1d1;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    height: 40px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $color-background-light;
+
+    @include mq(medium) {
+        display: block;
+    }
+}
