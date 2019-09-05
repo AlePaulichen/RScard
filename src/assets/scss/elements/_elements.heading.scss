@@ -1,20 +1,18 @@
-%heading{
-    font-weight: 700;
-}
+$heading-font-weight: 700;
 
 h1 {
-    @extend %heading;   
+    font-weight: $heading-font-weight;
     font-size: 3.6rem;
 }
 h2 {
-    @extend %heading; 
+    font-weight: $heading-font-weight;
     font-size: 3.4rem;
 }
 h3 {
-    @extend %heading;
+    font-weight: $heading-font-weight;
     font-size: 2rem;  
 }
 h4 {
-    @extend %heading; 
+    font-weight: $heading-font-weight;
     font-size: 1.6rem;  
 }
