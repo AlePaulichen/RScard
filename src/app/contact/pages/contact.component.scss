@@ -1,4 +1,4 @@
-.container {
+.container-contato {
     margin-top: 12.5rem;
     display: grid;
     grid-template-columns: [full-start] minmax(15px, 1fr) [main-content-start] minmax(min-content, 930px) [main-content-end] minmax(15px, 1fr) [full-end];
@@ -13,6 +13,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
         grid-column-gap: 30px;
+    }
+
+    > .social-media-bar {
+        grid-column: main-content-start / main-content-end;
     }
 }
 
