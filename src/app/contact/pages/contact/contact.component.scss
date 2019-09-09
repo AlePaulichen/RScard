@@ -17,6 +17,7 @@
 
     > .social-media-bar {
         grid-column: main-content-start / main-content-end;
+        margin-bottom: 5rem;
     }
 }
 
@@ -26,14 +27,12 @@
     font-weight: 600;
 }
 
-.contact-container {    
-    > .box {
-        background-color:#fff;
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-        padding: 40px 50px;
+.box {
+    background-color:#fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    padding: 40px 50px;
 
-        &.-nopadding{
-            padding: 0;
-        }
+    &.-nopadding{
+        padding: 0;
     }
 }
