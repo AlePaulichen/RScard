@@ -37,23 +37,6 @@
 .description {
     text-align: center;
     margin-bottom: 5rem;
-    
-    > .button {
-        padding: 21px 55px;
-        letter-spacing: 0.075rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.5rem;
-        transition: box-shadow 0.2s ease-in-out;
-        background-color: $color-background-dark-light;
-        color: $color-text-dark-2;
-        border: 1px solid $color-border-dark-light2;
-
-        &:hover {
-            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-            transition: box-shadow 0.2s ease-in-out;
-        }
-    }
 
     > .text {
         margin-top: 2.5rem;
