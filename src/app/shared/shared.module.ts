@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EsriMapComponent } from './components/esri-map/esri-map.component';
 import { SocialMediaBarComponent } from './components/social-media-bar/social-media-bar.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { SocialMediaBarComponent } from './components/social-media-bar/social-me
     MenuComponent,
     EsriMapComponent,
     SocialMediaBarComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { SocialMediaBarComponent } from './components/social-media-bar/social-me
     BaseLayoutComponent,
     FontAwesomeModule,
     EsriMapComponent,
-    SocialMediaBarComponent
+    SocialMediaBarComponent,
+    ButtonComponent
   ]
 })
 export class SharedModule { }

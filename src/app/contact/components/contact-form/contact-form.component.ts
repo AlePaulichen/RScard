@@ -1,12 +1,17 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MailContact } from 'src/app/shared/model/mail-contact.model';
+import { ButtonColor } from 'src/app/shared/enums/button-color.enum';
+import { ButtonSize } from 'src/app/shared/enums/button-size.enum';
 
 @Component({
     selector: 'app-contact-form',
     templateUrl: './contact-form.component.html',
 })
 export class ContactFormComponent implements OnInit {
+    buttonColor = ButtonColor;
+    buttonSize = ButtonSize;
+
     contactForm: FormGroup;
     name = new FormControl('', [Validators.required]);
     email = new FormControl('', [Validators.required]);
