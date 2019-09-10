@@ -1,23 +1,5 @@
-
 @import 'about-hero.scss';
-
-.profile-box {
-    margin-top: 12.5rem;
-    display: block;
-    z-index: 1;
-}
-
-.description {
-    text-align: center;
-    margin-bottom: 5rem;
-
-    > .text {
-        margin-top: 2.5rem;
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.8; 
-    }
-}
+@import 'resume-description.scss';
 
 
 
