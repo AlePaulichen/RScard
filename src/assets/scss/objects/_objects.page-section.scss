@@ -1,10 +1,11 @@
 .page-section {
+    padding-top: calc(5rem + 6rem); // including header height
+    padding-bottom: 5rem;
 
     > .title {
-        grid-column: main-content-start / main-content-end;
-        margin-top: 12.5rem;
         font-size: 3.4rem;
         text-align: center;
         font-weight: 600;
+        margin-bottom: 2.5rem;
     }
 }
