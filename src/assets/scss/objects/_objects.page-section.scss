@@ -1,0 +1,10 @@
+.page-section {
+
+    > .title {
+        grid-column: main-content-start / main-content-end;
+        margin-top: 12.5rem;
+        font-size: 3.4rem;
+        text-align: center;
+        font-weight: 600;
+    }
+}
