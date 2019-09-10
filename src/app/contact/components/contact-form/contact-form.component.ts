@@ -5,7 +5,7 @@ import { ButtonColor } from 'src/app/shared/enums/button-color.enum';
 import { ButtonSize } from 'src/app/shared/enums/button-size.enum';
 
 @Component({
-    selector: 'app-contact-form',
+    selector: 'rsc-contact-form',
     templateUrl: './contact-form.component.html',
 })
 export class ContactFormComponent implements OnInit {

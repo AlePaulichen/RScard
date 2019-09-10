@@ -11,7 +11,7 @@ import {
 import { SocialIconsColor } from '../../enums/social-icons-color.enum';
 
 @Component({
-    selector: 'app-social-media-bar',
+    selector: 'rsc-social-media-bar',
     templateUrl: './social-media-bar.component.html',
 })
 export class SocialMediaBarComponent implements OnInit {

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
-    selector: 'app-profile-box',
+    selector: 'rsc-profile-box',
     templateUrl: './profile-box.component.html',
 })
 export class ProfileBoxComponent implements OnInit {

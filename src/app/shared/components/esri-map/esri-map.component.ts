@@ -3,7 +3,7 @@ import { loadModules } from 'esri-loader';
 import esri = __esri; // Esri TypeScript Types
 
 @Component({
-    selector: 'app-esri-map',
+    selector: 'rsc-esri-map',
     templateUrl: './esri-map.component.html',
 })
 export class EsriMapComponent implements OnInit {
