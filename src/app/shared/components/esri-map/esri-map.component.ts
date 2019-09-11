@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import esri = __esri; // Esri TypeScript Types
 
@@ -7,6 +7,7 @@ import esri = __esri; // Esri TypeScript Types
     templateUrl: './esri-map.component.html',
 })
 export class EsriMapComponent implements OnInit {
+    @HostBinding('class.rsc-esri-map') hostClass = true;
 
     // Reference for the <div> where will place the map
     @ViewChild('mapViewNode', {static: true}) private mapViewEl: ElementRef;

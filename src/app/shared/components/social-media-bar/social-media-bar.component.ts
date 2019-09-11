@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import {
     IconDefinition,
     faTwitter,
@@ -15,6 +15,9 @@ import { SocialIconsColor } from '../../enums/social-icons-color.enum';
     templateUrl: './social-media-bar.component.html',
 })
 export class SocialMediaBarComponent implements OnInit {
+
+    @HostBinding('class.rsc-social-media-bar') hostClass = true;
+
     constructor() { }
 
     @Input() socialIcons: IconDefinition[] = [faTwitter, faFacebookF, faDribbble, faLinkedinIn, faInstagram, faGooglePlusG];

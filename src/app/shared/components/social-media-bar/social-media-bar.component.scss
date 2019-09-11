@@ -1,4 +1,4 @@
-.social-media {
+.rsc-social-media-bar {
     display: grid;
     grid-template-columns: repeat(6, 45px);
     grid-column-gap: 30px;
@@ -10,45 +10,45 @@
         grid-template-columns: repeat(6, 35px);
         grid-column-gap: 10px;
     }
-}
 
-.social-button {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0);
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &.-white{
-        color: $color-text-light;
-    }
-
-    &.-gray{
-        color: #d7d7d7;
-
+    > .button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
         &:hover,
         &:active,
         &:focus {
-            color: $color-text-dark-2;
+            background-color: rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in;            
+        }
+
+        &.-white{
+            color: $color-text-light;
+        }
+    
+        &.-gray{
+            color: #d7d7d7;
+    
+            &:hover,
+            &:active,
+            &:focus {
+                color: $color-text-dark-2;
+            }
+        }
+    
+        @include mq(small) {
+            width: 35px;
+            height: 35px;
         }
     }
 
-    @include mq(small) {
-        width: 35px;
-        height: 35px;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: rgba(0,0,0,0.1);
-        transition: all 0.3s ease-in;            
-    }
-
-    & > .icon {
+    > .button > .icon {
         display: block;
         font-size: 2rem;
         color: inherit;
