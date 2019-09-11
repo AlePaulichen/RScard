@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, HostBinding } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MailContact } from 'src/app/shared/model/mail-contact.model';
 import { ButtonColor } from 'src/app/shared/enums/button-color.enum';
@@ -9,6 +9,8 @@ import { ButtonSize } from 'src/app/shared/enums/button-size.enum';
     templateUrl: './contact-form.component.html',
 })
 export class ContactFormComponent implements OnInit {
+    @HostBinding('class.rsc-contact-form') hostClass = true;
+
     buttonColor = ButtonColor;
     buttonSize = ButtonSize;
 

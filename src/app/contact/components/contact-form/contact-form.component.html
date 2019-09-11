@@ -1,28 +1,29 @@
-<form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
-    <h3 class="title">Feel free to contact me</h3>
-    <div class="input-field" [class.-typed]="name.value.length > 0">
+<h3 class="title">Feel free to contact me</h3>
+<form class="form default-form" [formGroup]="contactForm" (ngSubmit)="submit()">
+    <div class="inputfield -animated" [class.-typed]="name.value.length > 0">
         <input class="input" id="name" type="text" [formControl]="name">
         <label class="label" for="name">Name</label>
         <span class="line"></span>
     </div>
-    <div class="input-field" [class.-typed]="email.value.length > 0">
+    <div class="inputfield -animated" [class.-typed]="email.value.length > 0">
         <input class="input" id="email" type="text" [formControl]="email">
         <label class="label" for="email">Email</label>
         <span class="line"></span>
     </div>
-    <div class="input-field" [class.-typed]="subject.value.length > 0">
+    <div class="inputfield -animated" [class.-typed]="subject.value.length > 0">
         <input class="input" id="subject" type="text" [formControl]="subject">
         <label class="label" for="subject">Subject</label>
         <span class="line"></span>
     </div>
-    <div class="input-field" [class.-typed]="message.value.length > 0">
+    <div class="inputfield -animated" [class.-typed]="message.value.length > 0">
         <textarea class="input -textarea" id="message" rows="4" [formControl]="message"></textarea>
         <label class="label" for="message">Message</label>
         <span class="line"></span>
     </div>
-    
-    <input type="checkbox" id="privacy-policy" [formControl]="privacyPolicy">
-    <label class="label -checkbox" for="privacy-policy">I have read the Privacy Policy note.</label>
+    <div class="inputfield">
+        <input type="checkbox" id="privacy-policy" [formControl]="privacyPolicy">
+        <label class="label -checkbox" for="privacy-policy">I have read the Privacy Policy note.</label>
+    </div>
 
     <rsc-button text="Send" [buttonColor]="buttonColor.RED" [buttonSize]="buttonSize.SMALL"></rsc-button>
 </form>
