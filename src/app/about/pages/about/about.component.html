@@ -1,11 +1,15 @@
-<div class="container">
-    <div class="hero">
+<div class="page-container">
+    <div class="about-hero">
     </div>
-    <app-profile-box class="profile-box"></app-profile-box>
-    <div class="description">
-        <app-button [buttonColor]="buttonColor.GRAY" text="Download Resume"></app-button>
-        <p class="text">Hello! I’m Robert Smith. Senior Web Developer specializing in front end development. Experienced with
-            all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages
-            including JavaScript, SQL, and C. Stng background in project management and customer relations.</p>
-    </div>
+    <section class="page-section maincontent">
+        <div class="about-container">
+            <rsc-profile-box></rsc-profile-box>
+            <div class="resume-description">
+                <rsc-button [buttonColor]="buttonColor.GRAY" text="Download Resume"></rsc-button>
+                <p class="text">Hello! I’m Robert Smith. Senior Web Developer specializing in front end development. Experienced with
+                    all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages
+                    including JavaScript, SQL, and C. Stng background in project management and customer relations.</p>
+            </div>
+        </div>
+    </section>
 </div>

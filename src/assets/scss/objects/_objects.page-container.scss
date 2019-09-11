@@ -1,0 +1,13 @@
+.page-container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(15px, 1fr) [main-content-start] minmax(min-content, 930px) [main-content-end] minmax(15px, 1fr) [full-end];
+    grid-row-gap: 30px;
+
+    > .maincontent {
+        grid-column: main-content-start / main-content-end;
+    }
+
+    > .fullwidth {
+        grid-column: full-start / full-end;
+    }
+}

@@ -1,7 +1,3 @@
-@import '../../../app/shared/pages/base-layout/base-layout.component.scss';
-
-@import '../../../app/about/pages/about/about.component.scss';
-
-@import '../../../app/contact/pages/contact/contact.component.scss';
-
-@import '../../../app/skills/pages/skills/skills.component.scss';
+@import './objects.page-container';
+@import './objects.page-section';
+@import './objects.default-form';
