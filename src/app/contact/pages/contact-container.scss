@@ -11,5 +11,9 @@
         &.-nopadding{
             padding: 0;
         }
+
+        @include mq(small) {
+            padding: 30px 20px;
+        }
     }
 }
