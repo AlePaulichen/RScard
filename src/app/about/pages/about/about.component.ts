@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { ButtonColor } from 'src/app/shared/enums/button-color.enum';
 
 @Component({
-  selector: 'app-about',
+  selector: 'rsc-about',
   templateUrl: './about.component.html',
 })
 export class AboutComponent implements OnInit {
+  @HostBinding('class.rsc-about') hostClass = true;
 
   buttonColor = ButtonColor;
 

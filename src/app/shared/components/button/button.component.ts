@@ -1,12 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { ButtonColor } from '../../enums/button-color.enum';
 import { ButtonSize } from '../../enums/button-size.enum';
 
 @Component({
-    selector: 'app-button',
+    selector: 'rsc-button',
     templateUrl: './button.component.html',
 })
 export class ButtonComponent implements OnInit {
+
+    @HostBinding('class.rsc-button') hostClass = true;
 
     @Input() text: string;
     @Input() buttonColor: ButtonColor = ButtonColor.GRAY;
