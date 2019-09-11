@@ -5,6 +5,8 @@ import { Component, OnInit, HostBinding } from '@angular/core';
     templateUrl: './profile-box.component.html',
 })
 export class ProfileBoxComponent implements OnInit {
+    @HostBinding('class.rsc-profile-box') hostClass = true;
+
     constructor() { }
 
     ngOnInit(): void {
