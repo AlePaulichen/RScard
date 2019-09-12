@@ -11,6 +11,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'about', pathMatch: 'full' },
       { path: 'about', loadChildren: './about/about.module#AboutModule' },
       { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+      { path: 'skills', loadChildren: './skills/skills.module#SkillsModule' },
     ]
   }
 ];

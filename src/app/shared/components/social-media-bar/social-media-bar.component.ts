@@ -25,6 +25,5 @@ export class SocialMediaBarComponent implements OnInit {
     @Input() socialIconsColor: SocialIconsColor = SocialIconsColor.WHITE;
 
     ngOnInit(): void {
-        console.log(this.socialIconsColor);
     }
 }

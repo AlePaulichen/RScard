@@ -16,7 +16,6 @@ import { AboutModule } from './about/about.module';
     RouterModule,
     AppRoutingModule,
     SharedModule,
-    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
