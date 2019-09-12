@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
-    selector: 'app-skills',
+    selector: 'rsc-skills',
     templateUrl: './skills.component.html',
 })
 export class SkillsComponent implements OnInit {
+    @HostBinding('class.rsc-skills') hostClass = true;
+
     constructor() { }
 
     ngOnInit(): void { }
