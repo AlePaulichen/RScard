@@ -1,22 +1,22 @@
 <h3 class="title">Feel free to contact me</h3>
 <form class="form default-form" [formGroup]="contactForm" (ngSubmit)="submit()">
     <div class="inputfield -animated" [class.-typed]="name.value.length > 0">
-        <input class="input" id="name" type="text" [formControl]="name">
+        <input class="input" id="name" type="text" [formControl]="name" (focusout)="saveDraft()">
         <label class="label" for="name">Name</label>
         <span class="line"></span>
     </div>
     <div class="inputfield -animated" [class.-typed]="email.value.length > 0">
-        <input class="input" id="email" type="text" [formControl]="email">
+        <input class="input" id="email" type="text" [formControl]="email" (focusout)="saveDraft()">
         <label class="label" for="email">Email</label>
         <span class="line"></span>
     </div>
     <div class="inputfield -animated" [class.-typed]="subject.value.length > 0">
-        <input class="input" id="subject" type="text" [formControl]="subject">
+        <input class="input" id="subject" type="text" [formControl]="subject" (focusout)="saveDraft()">
         <label class="label" for="subject">Subject</label>
         <span class="line"></span>
     </div>
     <div class="inputfield -animated" [class.-typed]="message.value.length > 0">
-        <textarea class="input -textarea" id="message" rows="4" [formControl]="message"></textarea>
+        <textarea class="input -textarea" id="message" rows="4" [formControl]="message" (focusout)="saveDraft()"></textarea>
         <label class="label" for="message">Message</label>
         <span class="line"></span>
     </div>

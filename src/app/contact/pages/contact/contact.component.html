@@ -2,7 +2,7 @@
     <section class="page-section maincontent">
         <h2 class="title">Contact Us</h2>
         <div class="contact-container">
-            <rsc-contact-form class="box" (submitContact)="submitContact($event)"></rsc-contact-form>
+            <rsc-contact-form class="box" [mailDraft]="mailDraft | async" (submitMailContact)="submitMailContact($event)" (saveMailContactDraft)="saveMailContactDraft($event)"></rsc-contact-form>
             <div class="box -nopadding">
                 <rsc-contact-info></rsc-contact-info>
                 <rsc-location-map></rsc-location-map>

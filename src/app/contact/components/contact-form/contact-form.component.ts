@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, HostBinding } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, HostBinding, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MailContact } from 'src/app/shared/model/mail-contact.model';
 import { ButtonColor } from 'src/app/shared/enums/button-color.enum';
@@ -21,7 +21,10 @@ export class ContactFormComponent implements OnInit {
     message = new FormControl('', [Validators.required]);
     privacyPolicy = new FormControl(null, [Validators.required]);
 
+    @Input() mailDraft: MailContact;
+
     @Output() submitMailContact = new EventEmitter<MailContact>();
+    @Output() saveMailContactDraft = new EventEmitter<MailContact>();
 
     constructor(
         private fb: FormBuilder
@@ -34,11 +37,22 @@ export class ContactFormComponent implements OnInit {
         });
     }
 
+    ngOnInit(): void {
+        if (this.mailDraft) {
+            this.name.setValue(this.mailDraft.name);
+            this.email.setValue(this.mailDraft.email);
+            this.subject.setValue(this.mailDraft.subject);
+            this.message.setValue(this.mailDraft.message);
+        }
+    }
+
     submit() {
         if (!this.privacyPolicy.hasError('required') && this.contactForm.valid) {
             this.submitMailContact.emit(this.contactForm.value);
         }
     }
 
-    ngOnInit(): void { }
+    saveDraft() {
+        this.saveMailContactDraft.emit(this.contactForm.value);
+    }
 }
